@@ -92,7 +92,7 @@ elif tabs == 'Akses Pasar UMKM':
     display_names = {
         "Name of Project": "Nama UMKM",
         "project description": "Deskripsi Keterangan",
-        "keywords": "Alamat"
+        "keywords": "Alamat",
         "government name of contact": "Nama Kontak",
         "government contact email ": " Nomor Kontak/email"
     }
