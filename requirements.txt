@@ -2,7 +2,7 @@ altair==5.1.2
 anaconda==0.0.1.1
 async-generator==1.10
 attrs==23.1.0
-backports.zoneinfo==0.2.1
+backports.zoneinfo==0.2.1;python_version<"3.9"
 beautifulsoup4==4.12.2
 blinker==1.6.3
 cachetools==5.3.1
