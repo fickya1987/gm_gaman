@@ -93,7 +93,6 @@ elif tabs == 'Akses Pasar UMKM':
         "Name of Project": "Nama UMKM",
         "project description": "Deskripsi Keterangan",
         "keywords": "Alamat"
-        "geographic scope": "Lokasi",
         "government name of contact": "Nama Kontak",
         "government contact email ": " Nomor Kontak/email"
     }
