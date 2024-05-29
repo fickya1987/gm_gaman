@@ -22,7 +22,7 @@ st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_ht
 
 #Defining the side hover bar of the website
 with st.sidebar:
-    tabs = on_hover_tabs(tabName=['Home', 'App', 'Contact', 'About'], 
+    tabs = on_hover_tabs(tabName=['Beranda', 'Akses Pasar UMKM', 'Contact', 'Info'], 
                          iconName=['home', 'code', 'mail', 'feed'],
                          styles = {'navtab': 
                                    {'background-color':'#111','color': '#D2DADA','font-size': '18px','transition': '.3s','white-space': 'nowrap','text-transform': 'capitalize'},
@@ -36,14 +36,8 @@ if tabs =='Home':
 
     col1, col2 = st.columns(2)
     with col1:
-        st.title("NASA Open Science Project Creator + Contributor Zone")
-        st.subheader("A Project by GAMAN for NASA Space Apps Challenge 2023")
-        st.markdown("")
-        st.markdown("We want to create a marketplace for open science projects so that open science projects will be more accessible for everyone who eager to contribute to science projects related to their interests. Also, we want to build a marketplace for project creators to find creators who match with all skills & expertise required in the project. We will be building this marketplace in web application using Machine Learning, Large Language Model (LLM), Generative AI and Natural Language Processing (NLP).")
-        st.markdown("We are hoping that all interactions between project creators and contributors in any NASA Open Science Project will become more accessible, interactive, and fun. In addition, this web app will make NASA Open Data become easier to find and more organized.")
-        st.markdown("In this website, in Menu APP, we are going to show you how we use Machine Learning to build Recommendation approach for contributors to match their interest with the available open science projects.")
-        st.markdown("Meanwhile, we also provide another website link for project creators and contributors so that they will be navigated by AI Chatting Bot. Link is https://creator.voiceflow.com/prototype/65228db78a17c2d6818ac808")
-        st.markdown("For communication tool between project creators and contributors, we will do video and chat in platform https://brie.fi/ng/ficky01#ficky01")
+        st.title("Garuda Mandiri -  Akses Pasar UMKM AI")
+        st.subheader("GAMAN untuk Hackathon Bank Indonesia")
 
     with col2:
         def load_lottieurl(url:str):
@@ -55,10 +49,10 @@ if tabs =='Home':
         st_lottie(lottie_animation, key="animation")   
 
 #Defining the main webpage page
-elif tabs == 'App':
-    st.title("NASA Open Science Project Creator + Contributor Zone")
-    st.subheader("Elaborate the details below to look for many Open Science Project opportunities! ")
-    st.caption("Please wait and be patient!")
+elif tabs == 'Akses Pasar UMKM':
+    st.title("Garuda Mandiri -  Akses Pasar UMKM AI")
+    st.subheader("Portal GAMAN - Garuda Mandiri ini memfasilitasi para wirausaha UMKM dalam mencari pasar untuk menjual produknya! ")
+    st.caption("Silahkan Pilih!")
     st.markdown("")
 
     def load_data():
