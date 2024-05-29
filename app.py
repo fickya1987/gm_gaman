@@ -56,19 +56,19 @@ elif tabs == 'Akses Pasar UMKM':
     st.markdown("")
 
     def load_data():
-        data = pd.read_excel('Federal Crowdsourcing and Citizen Science Catalog.xlsx', engine='openpyxl')
+        data = pd.read_excel('gaman_garuda_mandiri_umkm.xlsx', engine='openpyxl')
         return data
     data = load_data()
 
     #Creating the first filter using topic column
     topic_values = data["geographic scope"].unique()
 
-    search_value_topic = st.selectbox("Select a project location where you are interested in: ", topic_values, format_func=lambda x: 'Select an option' if x == '.' else x)
+    search_value_topic = st.selectbox("Silahkan Pilih Daerah/Provinsi: ", topic_values, format_func=lambda x: 'Select an option' if x == '.' else x)
     topic_data = data[data["geographic scope"] == search_value_topic]
 
     #Creating the second filter using language column
     language_values = topic_data["agency sponsor"].unique()
-    search_value_language = st.selectbox("Select a agency sponsor or institution that you are interested in: ", sorted(language_values), format_func=lambda x: 'Select an option' if x == '.' else x)
+    search_value_language = st.selectbox("Silahkan Pilih Kategori User yang Anda sedang Cari: ", sorted(language_values), format_func=lambda x: 'Select an option' if x == '.' else x)
     language_data = topic_data[topic_data["agency sponsor"] == search_value_language]
 
     #Creating the third filter using tags column
@@ -90,11 +90,12 @@ elif tabs == 'Akses Pasar UMKM':
 
     #Dictionary to map original column names to display names
     display_names = {
-        "Name of Project": "Project",
-        "project description": "Description",
-        "geographic scope": "Location",
-        "keywords": "keywords",
-        "email": "email"
+        "Name of Project": "Nama UMKM",
+        "project description": "Deskripsi Keterangan",
+        "keywords": "Alamat"
+        "geographic scope": "Lokasi",
+        "government name of contact": "Nama Kontak",
+        "government contact email ": " Nomor Kontak/email"
     }
     
     tags_data_display = tags_data[columns_to_display].rename(columns=display_names)
