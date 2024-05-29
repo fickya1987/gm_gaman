@@ -94,7 +94,7 @@ elif tabs == 'Akses Pasar UMKM':
         "project description": "Deskripsi Keterangan",
         "keywords": "Alamat",
         "government name of contact": "Nama Kontak",
-        "government contact email ": " Nomor Kontak/email"
+        "government contact email": "Nomor Kontak"
     }
     
     tags_data_display = tags_data[columns_to_display].rename(columns=display_names)
