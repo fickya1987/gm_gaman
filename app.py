@@ -86,15 +86,15 @@ elif tabs == 'Akses Pasar UMKM':
     search_value_tags = st.multiselect("Pilih Sektor Usaha: ", sorted(unique_tags_value), max_selections=10, format_func=lambda x: 'Select an option' if x == '.' else x)
     tags_data = language_data[language_data["fields of science"].apply(lambda x: any(tag in x for tag in search_value_tags))]
 
-    columns_to_display = ["Name of Project", "project description", "keywords", "government name of contact", "government contact email"]
+    columns_to_display = ["Name of Project", "project description", "keywords", "contact", "number"]
 
     #Dictionary to map original column names to display names
     display_names = {
         "Name of Project": "Nama UMKM",
         "project description": "Deskripsi Keterangan",
         "keywords": "Alamat",
-        "government name of contact": "Nama Kontak",
-        "government contact email": "Nomor Kontak"
+        "contact": "Nama Kontak",
+        "number": "Nomor Kontak"
     }
     
     tags_data_display = tags_data[columns_to_display].rename(columns=display_names)
